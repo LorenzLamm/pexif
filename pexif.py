@@ -93,7 +93,8 @@ except AttributeError:
 
 """
 
-import StringIO
+#import StringIO
+import io.StringIO as StringIO
 import sys
 from struct import unpack, pack
 
