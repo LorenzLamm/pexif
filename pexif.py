@@ -94,7 +94,7 @@ except AttributeError:
 """
 
 #import StringIO
-import io.StringIO as StringIO
+from io import StringIO
 import sys
 from struct import unpack, pack
 
