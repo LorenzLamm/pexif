@@ -521,7 +521,7 @@ class IfdData(object):
                 for i in range(components):
                     actual_data += pack(e + t, *the_data[i].as_tuple())
             else:
-                raise "Can't handle this", exif_type
+                raise ("Can't handle this", exif_type)
             if (byte_size) > 4:
                 output_data += actual_data
                 actual_data = pack(e + "I", data_offset)
