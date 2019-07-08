@@ -1175,8 +1175,8 @@ class JpegFile:
                 (1/60.0 * float(min.num) / min.den) + \
                 (1/3600.0 * float(sec.num) / sec.den)
         if not hasattr(self.exif.primary, 'GPSIFD'):
-            raise self.NoSection, "File %s doesn't have a GPS section." % \
-                self.filename
+            raise (self.NoSection, "File %s doesn't have a GPS section." % \
+                self.filename)
 
         gps = self.exif.primary.GPS
         lat = convert(gps.GPSLatitude)
