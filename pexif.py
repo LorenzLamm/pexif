@@ -127,18 +127,18 @@ def printSOI():
 def debug(*debug_string):
     """Used for print style debugging. Enable by setting the global
     DEBUG to 1."
-    ""
+    """
     print(SOI_MARKER)
     print(chr(DELIM))
     print(str(DELIM))
-    #if DEBUG:
-    #    for each in debug_string:
-    #        print (each)#,
-    #    print("")
+    if DEBUG:
+        for each in debug_string:
+            print (each)#,
+        print("")
 
 
 class DefaultSegment:
-    test"""DefaultSegment represents a particluar segment of a JPEG file.
+    """DefaultSegment represents a particluar segment of a JPEG file.
     This class is instantiated by JpegFile when parsing Jpeg files
     and is not intended to be used directly by the programmer. This
     base class is used as a default which doesn't know about the internal
