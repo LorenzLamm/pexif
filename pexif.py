@@ -96,6 +96,7 @@ except AttributeError:
 import StringIO
 import sys
 from struct import unpack, pack
+print("TEST")
 
 MAX_HEADER_SIZE = 64 * 1024
 DELIM = 0xff
