@@ -131,10 +131,10 @@ def debug(*debug_string):
     print(SOI_MARKER)
     print(chr(DELIM))
     print(str(DELIM))
-    if DEBUG:
-        for each in debug_string:
-            print (each)#,
-        print("")
+    #if DEBUG:
+    #    for each in debug_string:
+    #        print (each)#,
+    #    print("")
 
 
 class DefaultSegment:
