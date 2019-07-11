@@ -124,6 +124,7 @@ def printSOI():
   print(SOI_MARKER, "HELLOE")
   print(chr(DELIM))
   print(str(DELIM))
+  print(EOI_MARKER, "Eoi")
 
 def debug(*debug_string):
     """Used for print style debugging. Enable by setting the global
@@ -209,6 +210,7 @@ class StartOfScanSegment(DefaultSegment):
 
         # Usually the EOI marker will be at the end of the file,
         # optimise for this case
+        print(img_data[-2:])
         if img_data[-2:] == EOI_MARKER:
             remaining = 2
         else:
