@@ -1,5 +1,3 @@
-print("HI")sss
-
 """
 pexif is a module which allows you to view and modify meta-data in
 JPEG/JFIF/EXIF files.
