@@ -126,7 +126,11 @@ def printSOI():
 
 def debug(*debug_string):
     """Used for print style debugging. Enable by setting the global
-    DEBUG to 1."""
+    DEBUG to 1."
+    ""
+    print(SOI_MARKER)
+    print(chr(DELIM))
+    print(str(DELIM))
     if DEBUG:
         for each in debug_string:
             print (each)#,
