@@ -177,7 +177,7 @@ class DefaultSegment:
         fd.write(pack('B', self.marker))
         data = self.get_data()
         fd.write(pack('>H', len(data) + 2))
-        fd.write(data)
+        fd.write(data.encode())
 
     def get_data(self):
         """This method is called by write to generate the data for this segment.
