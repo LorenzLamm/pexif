@@ -101,7 +101,7 @@ from struct import unpack, pack
 MAX_HEADER_SIZE = 64 * 1024
 DELIM = 0xff
 EOI = 0xd9
-SOI_MARKER = chr(DELIM) + '\xd8'
+SOI_MARKER = b'\xff\xd8'
 print(SOI_MARKER)
 EOI_MARKER = chr(DELIM) + '\xd9'
 
