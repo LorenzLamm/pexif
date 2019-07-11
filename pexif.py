@@ -173,7 +173,7 @@ class DefaultSegment:
         must write out any data in the segment. This shouldn't in general be
         overloaded by subclasses, they should instead override the get_data()
         method."""
-        fd.write('\xff')
+        fd.write(b'\xff')
         fd.write(pack('B', self.marker))
         data = self.get_data()
         fd.write(pack('>H', len(data) + 2))
