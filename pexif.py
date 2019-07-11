@@ -177,7 +177,7 @@ class DefaultSegment:
         fd.write(pack('B', self.marker))
         data = self.get_data()
         fd.write(pack('>H', len(data) + 2))
-        if(isinstance(data,str):
+        if(isinstance(data,str)):
            data = data.encode()
         fd.write(data)
 
