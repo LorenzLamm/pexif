@@ -130,9 +130,7 @@ def debug(*debug_string):
     """Used for print style debugging. Enable by setting the global
     DEBUG to 1."
     """
-    print(SOI_MARKER)
-    print(chr(DELIM))
-    print(str(DELIM))
+
     if DEBUG:
         for each in debug_string:
             print (each)#,
@@ -212,8 +210,7 @@ class StartOfScanSegment(DefaultSegment):
 
         # Usually the EOI marker will be at the end of the file,
         # optimise for this case
-        print(EOI_MARKER, "<-- EOI")
-        print(img_data[-2:], "<-- img_data")
+
         if img_data[-2:] == EOI_MARKER:
             remaining = 2
         else:
@@ -553,17 +550,6 @@ class IfdData(object):
             if(isinstance(data, bytes)):
                data = data.decode()
             data += pack(self.e + "HHI", *entry[:3]).decode()
-            
-            print(type(pack(self.e + "HHI", *entry[:3])))
-            print(type(entry[3]))
-            print(type(data))
-            print(len(data))
-            print(len(entry[3]))
-            print("-------------")
-            print(entry[3])
-            print(entry[3].encode())
-            print(data)
-            #print(data + entry[3].encode())
             data += entry[3]#.encode()
 
         next_offset = data_offset
@@ -1064,8 +1050,6 @@ class JpegFile:
         self.mode = mode
         # input is the file descriptor
         soi_marker = input.read(len(SOI_MARKER))
-        print(SOI_MARKER)
-        print(soi_marker)
         # The very first thing should be a start of image marker
         if (soi_marker != SOI_MARKER):
             raise self.InvalidFile("Error reading soi_marker. Got <%s> "
