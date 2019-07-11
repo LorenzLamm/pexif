@@ -537,6 +537,8 @@ class IfdData(object):
             data += pack(self.e + "HHI", *entry[:3])
             print(data)
             print(entry[3])
+            print(type(data))
+            print(type(entry[3]))
             data += entry[3]
 
         next_offset = data_offset
