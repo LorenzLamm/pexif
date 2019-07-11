@@ -119,6 +119,11 @@ DEBUG = 0
 unknown_maker_note_as_error = False
 
 
+def printSOI():
+  print(SOI_MARKER)
+  print(chr(DELIM))
+  print(str(DELIM))
+
 def debug(*debug_string):
     """Used for print style debugging. Enable by setting the global
     DEBUG to 1."""
