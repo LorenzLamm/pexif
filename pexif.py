@@ -549,6 +549,9 @@ class IfdData(object):
         data = pack(e + 'H', len(self.entries))
         for entry in out_entries:
             data += pack(self.e + "HHI", *entry[:3])
+            if(isinstance(data, str):
+               data = data.decode()
+            print(type(pack(self.e + "HHI", *entry[:3])))
             print(type(entry[3]))
             print(type(data))
             print(len(data))
@@ -558,7 +561,7 @@ class IfdData(object):
             print(entry[3].encode())
             print(data)
             print(data + entry[3].encode())
-            data += entry[3].encode()
+            data += entry[3]#.encode()
 
         next_offset = data_offset
         if last:
