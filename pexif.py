@@ -210,7 +210,8 @@ class StartOfScanSegment(DefaultSegment):
 
         # Usually the EOI marker will be at the end of the file,
         # optimise for this case
-        print(img_data[-2:])
+        print(EOI_MARKER, "<-- EOI")
+        print(img_data[-2:], "<-- img_data")
         if img_data[-2:] == EOI_MARKER:
             remaining = 2
         else:
