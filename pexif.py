@@ -566,10 +566,10 @@ class IfdData(object):
 
         next_offset = data_offset
         if last:
-            data += pack(self.e + "I", 0)
+            data += pack(self.e + "I", 0).decode()
         else:
-            data += pack(self.e + "I", next_offset)
-        data += output_data.encode()
+            data += pack(self.e + "I", next_offset).decode()
+        data += output_data#.encode()
 
         assert (next_offset == offset+len(data))
 
