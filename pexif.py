@@ -954,7 +954,7 @@ class ExifSegment(DefaultSegment):
         data = ""
         data += "Exif\0\0"
         data += self.tiff_endian
-        data += pack(self.e + "HI", 42, 8)
+        data += pack(self.e + "HI", 42, 8).decode()
         data += ifds_data
 
         return data
