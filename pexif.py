@@ -120,7 +120,7 @@ unknown_maker_note_as_error = False
 
 
 def printSOI():
-  print(SOI_MARKER)
+  print(SOI_MARKER, "HELLOE")
   print(chr(DELIM))
   print(str(DELIM))
 
