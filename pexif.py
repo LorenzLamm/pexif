@@ -103,7 +103,7 @@ DELIM = 0xff
 EOI = 0xd9
 SOI_MARKER = b'\xff\xd8'
 #SOI_MARKER = chr(DELIM) + '\xd8'
-EOI_MARKER = b'\xd9\xd9'
+EOI_MARKER = b'\xff\xd9'
 #EOI_MARKER = chr(DELIM) + '\xd9'
 
 TIFF_OFFSET = 6
