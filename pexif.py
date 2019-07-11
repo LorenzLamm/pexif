@@ -102,6 +102,7 @@ MAX_HEADER_SIZE = 64 * 1024
 DELIM = 0xff
 EOI = 0xd9
 SOI_MARKER = chr(DELIM) + '\xd8'
+print(SOI_MARKER)
 EOI_MARKER = chr(DELIM) + '\xd9'
 
 TIFF_OFFSET = 6
@@ -1035,7 +1036,8 @@ class JpegFile:
         self.mode = mode
         # input is the file descriptor
         soi_marker = input.read(len(SOI_MARKER))
-
+        print(SOI_MARKER)
+        print(soi_marker)
         # The very first thing should be a start of image marker
         if (soi_marker != SOI_MARKER):
             raise self.InvalidFile("Error reading soi_marker. Got <%s> "
