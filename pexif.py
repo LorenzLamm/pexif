@@ -539,6 +539,8 @@ class IfdData(object):
             print(entry[3])
             print(type(data))
             print(type(entry[3]))
+            print("HI")
+            print(len(data))
             data += entry[3]
 
         next_offset = data_offset
