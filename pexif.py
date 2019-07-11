@@ -560,7 +560,7 @@ class IfdData(object):
             data += pack(self.e + "I", 0)
         else:
             data += pack(self.e + "I", next_offset)
-        data += output_data
+        data += output_data.encode()
 
         assert (next_offset == offset+len(data))
 
