@@ -549,6 +549,11 @@ class IfdData(object):
         data = pack(e + 'H', len(self.entries))
         for entry in out_entries:
             data += pack(self.e + "HHI", *entry[:3])
+            print(type(entry[3]))
+            print(type(data))
+            print(len(data))
+            print(len(entry[3]))
+            print("-------------")
             print(entry[3])
             print(entry[3].encode())
             print(data)
