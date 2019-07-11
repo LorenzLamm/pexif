@@ -102,8 +102,9 @@ MAX_HEADER_SIZE = 64 * 1024
 DELIM = 0xff
 EOI = 0xd9
 SOI_MARKER = b'\xff\xd8'
-print(SOI_MARKER)
-EOI_MARKER = chr(DELIM) + '\xd9'
+#SOI_MARKER = chr(DELIM) + '\xd8'
+EOI_MARKER = b'\xd9\xd9'
+#EOI_MARKER = chr(DELIM) + '\xd9'
 
 TIFF_OFFSET = 6
 TIFF_TAG = 0x2a
