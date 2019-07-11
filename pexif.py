@@ -548,9 +548,10 @@ class IfdData(object):
 
         data = pack(e + 'H', len(self.entries))
         for entry in out_entries:
-            data += pack(self.e + "HHI", *entry[:3])
             if(isinstance(data, bytes)):
                data = data.decode()
+            data += pack(self.e + "HHI", *entry[:3]).decode()
+            
             print(type(pack(self.e + "HHI", *entry[:3])))
             print(type(entry[3]))
             print(type(data))
